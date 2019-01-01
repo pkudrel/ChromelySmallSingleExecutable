@@ -1,18 +1,11 @@
 using System;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using AbcVersionTool;
 using Helpers;
-using Microsoft.Build.Tasks;
 using Nuke.Common;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
 using Nuke.Common.Tools.MSBuild;
-using Nuke.Common.Tools.NuGet;
-using Nuke.Common.Utilities.Collections;
-using static Nuke.Common.Tools.NuGet.NuGetTasks;
-using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
@@ -41,9 +34,6 @@ class Build : NukeBuild
     AbsolutePath LibzPath => ToolsDir / "LibZ.Tool" / "tools" / "libz.exe";
     AbsolutePath NugetPath => ToolsDir / "nuget" / "nuget.exe";
     AbsolutePath SevenZipPath => ToolsDir / "7-Zip.CommandLine" / "tools" / "7za.exe";
-
-
-
 
 
     Target Information => _ => _
@@ -124,7 +114,6 @@ class Build : NukeBuild
         .Executes(() =>
 
         {
-
             var doNotMarge = new[]
             {
                 "build.dll", "libcef.dll", "chrome_elf.dll", "d3dcompiler_47.dll",
@@ -165,9 +154,7 @@ class Build : NukeBuild
                            MainProject.Name;
 
             EnsureExistingDirectory(readyOut);
-            CopyFile(margeOut / $"{MainProject.Name}.exe", ArtifactsDir / $"simple-chromely.exe");
-            
-
+            CopyFile(margeOut / $"{MainProject.Name}.exe", ArtifactsDir / "simple-chromely.exe");
         });
 
     Target CleanOnTheEnd => _ => _

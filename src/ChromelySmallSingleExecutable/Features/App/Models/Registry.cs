@@ -11,7 +11,7 @@ namespace ChromelySmallSingleExecutable.Features.App.Models
         {
             PackageConfig = config.PackageConfig;
             CefSharpPackageName = config.PackageConfig.Name;
-            CefSharpEnvStorePath = Path.Combine(env.LocalApplicationData, "CefSharp", "env");
+            CefSharpEnvStorePath = Path.Combine(env.LocalApplicationData, "CefSharp", "packages");
             CefSharpEnvPath = Path.Combine(CefSharpEnvStorePath, config.PackageConfig.Name);
             CefSharpLocalePath = Path.Combine(CefSharpEnvPath, "locales");
             BrowserSubprocessPath = Path.Combine(CefSharpEnvPath, "CefSharp.BrowserSubprocess.exe");
