@@ -1,5 +1,5 @@
 ## Chromely Small Single Executable
-This example shows how create a single executable, small (less than 200KB),  Chromely app - https://github.com/mattkol/Chromely 
+This example shows how to create a single executable, small (less than 200KB),  Chromely app - https://github.com/mattkol/Chromely 
 
 It is based on: 
 https://github.com/mattkol/Chromely/wiki/Getting-Started-CefSharp-Winapi
