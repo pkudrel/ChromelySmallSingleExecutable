@@ -14,6 +14,6 @@ If the "CefSharp" package is in place (at `"%LOCALAPPDATA%\CefSharp\packages\cef
 - `.\_artifacts\simple-chromely.exe`
 
 ### About build process
-It use 
+It uses 
 - http://nuke.build/ (build automation system)
 - https://github.com/MiloszKrajewski/LibZ (creates  a single file with assemblies embedded into it)
