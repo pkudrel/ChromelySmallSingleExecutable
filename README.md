@@ -1,4 +1,4 @@
-## Chromely Small Single Executable
+## Chromely small, single file executable
 This example shows how to build a single executable, small (less than 200KB),  Chromely app - https://github.com/mattkol/Chromely 
 
 It is based on: 
